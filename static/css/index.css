@@ -1,0 +1,40 @@
+@font-face {
+	font-family: "Arcane Nine";
+	src: url("../fonts/Arcane Nine.otf");
+}
+
+html {
+	background-color: #131516;
+	color: #d8d4cf;
+}
+
+body {
+	font-family: "Arcane Nine", Arial, sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 90vh;
+}
+
+h1, h2 {
+	margin: 0;
+	background: linear-gradient(#9c692b, #e4c181);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+h1 {
+	font-size: 10rem;
+}
+
+h2 {
+	font-size: 5rem;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 50vh;
+}
