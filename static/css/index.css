@@ -3,6 +3,16 @@
 	src: url("../fonts/Arcane Nine.otf");
 }
 
+@font-face {
+	font-family: "Tabac Glam";
+	src: url("../fonts/TabacGlamG1-Regular.otf");
+}
+
+@font-face {
+	font-family: "Tabac Glam Bold";
+	src: url("../fonts/TabacGlamG1-Bold.otf");
+}
+
 html {
 	background-color: #131516;
 	color: #d8d4cf;
@@ -10,13 +20,13 @@ html {
 
 body {
 	font-family: "Arcane Nine", Arial, sans-serif;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 90vh;
+	/* display: flex; */
+	/* align-items: center; */
+	/* justify-content: center; */
+	/* height: 90vh; */
 }
 
-h1, h2 {
+h2, .digit, .place-desc {
 	margin: 0;
 	background: linear-gradient(#9c692b, #e4c181);
 	background-clip: text;
@@ -32,10 +42,37 @@ h2 {
 	font-size: 5rem;
 }
 
-.container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	height: 50vh;
+/* .container { */
+/* 	display: flex; */
+/* 	justify-content: center; */
+/* 	align-items: center; */
+/* 	flex-direction: column; */
+/* 	height: 50vh; */
+/* } */
+
+.digit {
+	font-family: "Arcane Nine";
+	font-size: 10rem;
+	text-align: center;
+}
+
+.place-desc {
+	font-family: "Tabac Glam Bold";
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+@media screen and (min-width: 600px) {
+	#timer-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: wrap;
+		max-width: 1500px;
+	}
+
+	.timer-place {
+		margin-left: 1.5rem;
+		margin-right: 1.5rem;
+	}
 }
