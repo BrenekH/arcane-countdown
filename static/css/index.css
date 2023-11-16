@@ -20,6 +20,7 @@ h1, h2 {
 	margin: 0;
 	background: linear-gradient(#9c692b, #e4c181);
 	background-clip: text;
+	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
