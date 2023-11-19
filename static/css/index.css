@@ -3,39 +3,112 @@
 	src: url("../fonts/Arcane Nine.otf");
 }
 
+@font-face {
+	font-family: "Tabac Glam";
+	src: url("../fonts/TabacGlamG1-Regular.otf");
+}
+
+@font-face {
+	font-family: "Tabac Glam Bold";
+	src: url("../fonts/TabacGlamG1-Bold.otf");
+}
+
 html {
 	background-color: #131516;
 	color: #d8d4cf;
 }
 
 body {
-	font-family: "Arcane Nine", Arial, sans-serif;
+	font-family: "Tabac Glam Bold", Arial, sans-serif;
+	margin: 0;
+	height: 100vh;
+
 	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	align-items: center;
-	justify-content: center;
-	height: 90vh;
 }
 
-h1, h2 {
+h1 {
+	font-size: 5rem;
+	font-family: "Arcane Nine";
+	text-align: center;
 	margin: 0;
+}
+
+a {
+	color: #d8d4cf;
+}
+
+a:hover {
+	filter: opacity(50%);
+}
+
+.container {
+	margin: 1rem;
+}
+
+.gold-gradient {
+	color: #c09556;
 	background: linear-gradient(#9c692b, #e4c181);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
-h1 {
+.digit {
+	font-family: "Arcane Nine";
 	font-size: 10rem;
+	text-align: center;
 }
 
-h2 {
-	font-size: 5rem;
+.place-desc {
+	font-family: "Tabac Glam Bold";
+	text-align: center;
+	font-size: 1.5rem;
 }
 
-.container {
+#header-container {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
-	height: 50vh;
+}
+
+#releases-text {
+	font-family: "Tabac Glam";
+	font-size: 2rem;
+	text-align: center;
+	margin: 0;
+	margin-top: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+	#timer-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: wrap;
+		max-width: 1500px;
+	}
+
+	#header-container {
+		flex-direction: row;
+	}
+
+	#s2-text {
+		margin: 1rem;
+	}
+
+	.timer-place {
+		margin-left: 1.5rem;
+		margin-right: 1.5rem;
+	}
+
+	.container {
+		height: 80%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 }
