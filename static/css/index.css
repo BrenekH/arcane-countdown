@@ -43,6 +43,10 @@ a:hover {
 	filter: opacity(50%);
 }
 
+.container {
+	margin: 1rem;
+}
+
 .gold-gradient {
 	margin: 0;
 	background: linear-gradient(#9c692b, #e4c181);
@@ -62,6 +66,11 @@ a:hover {
 	text-align: center;
 	font-size: 1.5rem;
 }
+
+/* #timer-container { */
+/* 	display: flex; */
+/* 	flex-direction: column-reverse; */
+/* } */
 
 #s2-subtitle {
 	font-size: 3rem;
