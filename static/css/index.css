@@ -19,14 +19,14 @@ html {
 }
 
 body {
-	font-family: "Arcane Nine", Arial, sans-serif;
+	font-family: "Tabac Glam Bold", Arial, sans-serif;
 	/* display: flex; */
 	/* align-items: center; */
 	/* justify-content: center; */
 	/* height: 90vh; */
 }
 
-h2, .digit, .place-desc {
+h1, .digit, .place-desc {
 	margin: 0;
 	background: linear-gradient(#9c692b, #e4c181);
 	background-clip: text;
@@ -35,20 +35,17 @@ h2, .digit, .place-desc {
 }
 
 h1 {
-	font-size: 10rem;
-}
-
-h2 {
 	font-size: 5rem;
+	font-family: "Arcane Nine";
 }
 
-/* .container { */
-/* 	display: flex; */
-/* 	justify-content: center; */
-/* 	align-items: center; */
-/* 	flex-direction: column; */
-/* 	height: 50vh; */
-/* } */
+a {
+	color: #d8d4cf;
+}
+
+a:hover {
+	filter: opacity(50%);
+}
 
 .digit {
 	font-family: "Arcane Nine";

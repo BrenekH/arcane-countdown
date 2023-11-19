@@ -5,11 +5,6 @@ const MS_IN_HOUR = 1000 * 60 * 60;
 const MS_IN_MIN = 1000 * 60;
 const MS_IN_SEC = 1000;
 
-function main() {
-    updateTime();
-    setInterval(updateTime, 1000);
-}
-
 function updateTime() {
     const currentTime = new Date();
     const timeLeft = targetDate.getTime() - currentTime.getTime();
@@ -21,10 +16,6 @@ function updateTime() {
     const seconds = Math.floor((timeLeft % MS_IN_MIN) / MS_IN_SEC);
 
     displayTime(weeks, days, hours, minutes, seconds);
-
-    // if (timeLeft < 0) {
-    //     elem.innerText = "Season 2 is released!";
-    // }
 }
 
 function displayTime(weeks, days, hours, minutes, seconds) {
@@ -46,3 +37,8 @@ function displayTime(weeks, days, hours, minutes, seconds) {
     minutesElem.innerText = minutesStr;
     secondsElem.innerText = secondsStr;
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+    updateTime();
+    setInterval(updateTime, 1000);
+});
