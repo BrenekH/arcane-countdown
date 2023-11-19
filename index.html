@@ -10,10 +10,39 @@
 
 		<script src="./static/js/index.js"></script>
 	</head>
-	<body onload="main()">
+	<body>
 		<div class="container">
-			<h2>Arcane Season 2</h2>
-			<h1 id="timer">0 Days 00:00:00</h1>
+			<div id="header-container">
+				<h1 class="gold-gradient">Arcane</h1>
+				<h1 id="s2-text" class="gold-gradient">Season 2</h1>
+			</div>
+			<p id="releases-text" class="gold-gradient">releases in</p>
+			<div id="timer-container">
+				<div class="timer-place">
+					<div id="weeks-digit" class="digit gold-gradient">98</div>
+					<div class="place-desc gold-gradient">Weeks</div>
+				</div>
+				<div class="timer-place">
+					<div id="days-digit" class="digit gold-gradient">76</div>
+					<div class="place-desc gold-gradient">Days</div>
+				</div>
+				<div class="timer-place">
+					<div id="hours-digit" class="digit gold-gradient">54</div>
+					<div class="place-desc gold-gradient">Hours</div>
+				</div>
+				<div class="timer-place">
+					<div id="minutes-digit" class="digit gold-gradient">32</div>
+					<div class="place-desc gold-gradient">Minutes</div>
+				</div>
+				<div class="timer-place">
+					<div id="seconds-digit" class="digit gold-gradient">10</div>
+					<div class="place-desc gold-gradient">Seconds</div>
+				</div>
+			</div>
 		</div>
+
+		<footer>
+			<p>Made by <a href="https://github.com/BrenekH" target="_blank">BrenekH</a></p>
+		</footer>
 	</body>
 </html>
