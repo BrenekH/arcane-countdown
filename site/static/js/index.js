@@ -19,19 +19,19 @@ function displayTime(months, weeks, days, hours, minutes, seconds) {
     const minutesElem = document.getElementById("minutes-digit");
     const secondsElem = document.getElementById("seconds-digit");
 
-    const monthsStr = months.toLocaleString(undefined, { minimumIntegerDigits: 2, useGrouping: false });
-    const weeksStr = weeks.toLocaleString(undefined, { minimumIntegerDigits: 2, useGrouping: false });
-    const daysStr = days.toLocaleString(undefined, { minimumIntegerDigits: 2, useGrouping: false });
-    const hoursStr = hours.toLocaleString(undefined, { minimumIntegerDigits: 2, useGrouping: false });
-    const minutesStr = minutes.toLocaleString(undefined, { minimumIntegerDigits: 2, useGrouping: false });
-    const secondsStr = seconds.toLocaleString(undefined, { minimumIntegerDigits: 2, useGrouping: false });
+    const monthsStr = months.toLocaleString(undefined, { minimumIntegerDigits: 1, useGrouping: false });
+    const weeksStr = weeks.toLocaleString(undefined, { minimumIntegerDigits: 1, useGrouping: false });
+    const daysStr = days.toLocaleString(undefined, { minimumIntegerDigits: 1, useGrouping: false });
+    const hoursStr = hours.toLocaleString(undefined, { minimumIntegerDigits: 1, useGrouping: false });
+    const minutesStr = minutes.toLocaleString(undefined, { minimumIntegerDigits: 1, useGrouping: false });
+    const secondsStr = seconds.toLocaleString(undefined, { minimumIntegerDigits: 1, useGrouping: false });
 
-    monthsElem.innerText = monthsStr;
-    weeksElem.innerText = weeksStr;
-    daysElem.innerText = daysStr;
-    hoursElem.innerText = hoursStr;
-    minutesElem.innerText = minutesStr;
-    secondsElem.innerText = secondsStr;
+    monthsElem.textContent = monthsStr;
+    weeksElem.textContent = weeksStr;
+    daysElem.textContent = daysStr;
+    hoursElem.textContent = hoursStr;
+    minutesElem.textContent = minutesStr;
+    secondsElem.textContent = secondsStr;
 }
 
 window.addEventListener("DOMContentLoaded", () => {
