@@ -6,31 +6,27 @@ const MS_IN_MIN = 1000 * 60;
 const MS_IN_SEC = 1000;
 
 function updateTime() {
-    const currentTime = new Date();
-    const timeLeft = targetDate.getTime() - currentTime.getTime();
+    const humanTimeLeft = countdown(targetDate, null, countdown.DEFAULTS | countdown.WEEKS);
 
-    const weeks = Math.floor(timeLeft / MS_IN_WEEK);
-    const days = Math.floor((timeLeft % MS_IN_WEEK) / MS_IN_DAY);
-    const hours = Math.floor((timeLeft % MS_IN_DAY) / MS_IN_HOUR);
-    const minutes = Math.floor((timeLeft % MS_IN_HOUR) / MS_IN_MIN);
-    const seconds = Math.floor((timeLeft % MS_IN_MIN) / MS_IN_SEC);
-
-    displayTime(weeks, days, hours, minutes, seconds);
+    displayTime(humanTimeLeft.months, humanTimeLeft.weeks, humanTimeLeft.days, humanTimeLeft.hours, humanTimeLeft.minutes, humanTimeLeft.seconds);
 }
 
-function displayTime(weeks, days, hours, minutes, seconds) {
+function displayTime(months, weeks, days, hours, minutes, seconds) {
+    const monthsElem = document.getElementById("months-digit");
     const weeksElem = document.getElementById("weeks-digit");
     const daysElem = document.getElementById("days-digit");
     const hoursElem = document.getElementById("hours-digit");
     const minutesElem = document.getElementById("minutes-digit");
     const secondsElem = document.getElementById("seconds-digit");
 
+    const monthsStr = months.toLocaleString(undefined, { minimumIntegerDigits: 2, useGrouping: false });
     const weeksStr = weeks.toLocaleString(undefined, { minimumIntegerDigits: 2, useGrouping: false });
     const daysStr = days.toLocaleString(undefined, { minimumIntegerDigits: 2, useGrouping: false });
     const hoursStr = hours.toLocaleString(undefined, { minimumIntegerDigits: 2, useGrouping: false });
     const minutesStr = minutes.toLocaleString(undefined, { minimumIntegerDigits: 2, useGrouping: false });
     const secondsStr = seconds.toLocaleString(undefined, { minimumIntegerDigits: 2, useGrouping: false });
 
+    monthsElem.innerText = monthsStr;
     weeksElem.innerText = weeksStr;
     daysElem.innerText = daysStr;
     hoursElem.innerText = hoursStr;
