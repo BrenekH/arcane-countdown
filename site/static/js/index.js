@@ -32,6 +32,21 @@ function displayTime(months, weeks, days, hours, minutes, seconds) {
     hoursElem.textContent = hoursStr;
     minutesElem.textContent = minutesStr;
     secondsElem.textContent = secondsStr;
+
+    updateLabels(months, weeks, days, hours, minutes, seconds);
+}
+
+function updateLabels(months, weeks, days, hours, minutes, seconds) {
+    const labelNamesValues = [["months", months], ["weeks", weeks], ["days", days], ["hours", hours], ["minutes", minutes], ["seconds", seconds]];
+
+    for (const labelNameValue of labelNamesValues) {
+        const name = labelNameValue[0];
+        const value = labelNameValue[1];
+        const elem = document.getElementById(`${name}-label`);
+        const uppercasedLabel = name[0].toUpperCase() + name.slice(1);
+
+        elem.textContent = (value === 1) ? uppercasedLabel.slice(0, -1) : uppercasedLabel;
+    }
 }
 
 window.addEventListener("DOMContentLoaded", () => {
