@@ -100,6 +100,16 @@ a:hover {
 		margin: 1rem;
 	}
 
+	.timer-place:has(#seconds-digit) {
+		min-width: 12.7rem;
+		margin-left: 0rem;
+	}
+
+	.timer-place:has(#minutes-digit) {
+		min-width: 11rem;
+		margin-left: 1rem;
+	}
+
 	.timer-place {
 		margin-left: 1.5rem;
 		margin-right: 1.5rem;
