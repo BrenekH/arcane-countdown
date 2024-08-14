@@ -1,4 +1,4 @@
-const targetDate = new Date("2024-12-01T00:00:00-0700");
+const targetDate = new Date("2024-11-02T00:00:00-0700");
 const MS_IN_WEEK = 1000 * 60 * 60 * 24 * 7;
 const MS_IN_DAY = 1000 * 60 * 60 * 24;
 const MS_IN_HOUR = 1000 * 60 * 60;
