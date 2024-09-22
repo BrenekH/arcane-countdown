@@ -4,28 +4,11 @@
 }
 
 @font-face {
-	font-family: "Inter Black";
-	src: url("../fonts/Inter_28pt-Black.ttf");
-}
-
-@font-face {
-	font-family: "Inter Light";
-	src: url("../fonts/Inter_28pt-Light.ttf");
-}
-
-@font-face {
-	font-family: "Inter Medium";
-	src: url("../fonts/Inter_28pt-Medium.ttf");
-}
-
-@font-face {
 	font-family: "Noto Serif Display Light";
-	src: url("../fonts/NotoSerifDisplay-VariableFont_wdth,wght.ttf");
-	font-weight: 400;
+	src: url("../fonts/NotoSerifDisplay-Regular.ttf");
 }
 
 @font-face {
 	font-family: "Noto Serif Display Bold";
-	src: url("../fonts/NotoSerifDisplay-VariableFont_wdth,wght.ttf");
-	font-weight: 800;
+	src: url("../fonts/NotoSerifDisplay-ExtraBold.ttf");
 }
