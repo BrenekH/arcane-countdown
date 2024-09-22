@@ -22,6 +22,8 @@ function findNextDate() {
 }
 
 function displayTime(months, weeks, days, hours, minutes, seconds) {
+    setHiddenPlaces(months, weeks, days, hours, minutes, seconds);
+
     const monthsElem = document.getElementById("months-digit");
     const weeksElem = document.getElementById("weeks-digit");
     const daysElem = document.getElementById("days-digit");
@@ -61,6 +63,57 @@ function updateLabels(months, weeks, days, hours, minutes, seconds) {
 
 function updateActNumber(actNum) {
     document.getElementById("act-number").textContent = actNum;
+}
+
+function setHiddenPlaces(months, weeks, days, hours, minutes, seconds) {
+    const monthsElem = document.getElementById("months-place");
+    const weeksElem = document.getElementById("weeks-place");
+    const daysElem = document.getElementById("days-place");
+    const hoursElem = document.getElementById("hours-place");
+    const minutesElem = document.getElementById("minutes-place");
+    const secondsElem = document.getElementById("seconds-place");
+    monthsElem.hidden = false;
+    weeksElem.hidden = false;
+    daysElem.hidden = false;
+    hoursElem.hidden = false;
+    minutesElem.hidden = false;
+    secondsElem.hidden = false;
+
+    if (months === 0) {
+        monthsElem.hidden = true;
+    } else {
+        return;
+    }
+
+    if (weeks === 0) {
+        weeksElem.hidden = true;
+    } else {
+        return;
+    }
+
+    if (days === 0) {
+        daysElem.hidden = true;
+    } else {
+        return;
+    }
+
+    if (hours === 0) {
+        hoursElem.hidden = true;
+    } else {
+        return;
+    }
+
+    if (minutes === 0) {
+        minutesElem.hidden = true;
+    } else {
+        return;
+    }
+
+    if (seconds === 0) {
+        secondsElem.hidden = true;
+    } else {
+        return;
+    }
 }
 
 window.addEventListener("DOMContentLoaded", () => {
