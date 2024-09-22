@@ -1,14 +1,24 @@
-const targetDate = new Date("2024-11-09T00:00:00-0700");
-const MS_IN_WEEK = 1000 * 60 * 60 * 24 * 7;
-const MS_IN_DAY = 1000 * 60 * 60 * 24;
-const MS_IN_HOUR = 1000 * 60 * 60;
-const MS_IN_MIN = 1000 * 60;
-const MS_IN_SEC = 1000;
+const targetDates = [[new Date("2024-11-09T00:00:00-0800"), "1"], [new Date("2024-11-16T00:00:00-0800"), "2"], [new Date("2024-11-23T00:00:00-0800"), "3"]];
 
 function updateTime() {
+    const [targetDate, targetAct] = findNextDate();
+
     const humanTimeLeft = countdown(targetDate, null, countdown.DEFAULTS | countdown.WEEKS);
 
+    updateActNumber(targetAct);
     displayTime(humanTimeLeft.months, humanTimeLeft.weeks, humanTimeLeft.days, humanTimeLeft.hours, humanTimeLeft.minutes, humanTimeLeft.seconds);
+}
+
+function findNextDate() {
+    const currentTime = new Date();
+
+    for (let i = 0; i < targetDates.length; i++) {
+        if (targetDates[i][0] > currentTime) {
+            return targetDates[i];
+        }
+    }
+
+    return [currentTime, "?"];
 }
 
 function displayTime(months, weeks, days, hours, minutes, seconds) {
@@ -47,6 +57,10 @@ function updateLabels(months, weeks, days, hours, minutes, seconds) {
 
         elem.textContent = (value === 1) ? uppercasedLabel.slice(0, -1) : uppercasedLabel;
     }
+}
+
+function updateActNumber(actNum) {
+    document.getElementById("act-number").textContent = actNum;
 }
 
 window.addEventListener("DOMContentLoaded", () => {
