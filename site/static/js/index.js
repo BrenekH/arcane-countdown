@@ -3,16 +3,21 @@ const targetDates = [
     [new Date("2024-11-16T00:00:00-0800"), "2", new Date("2024-11-17T00:00:00-0800")],
     [new Date("2024-11-23T00:00:00-0800"), "3", new Date("2024-11-24T00:00:00-0800")]
 ];
+const removeActTextAfter = new Date("2024-11-23T00:00:00-0800");
 
 function updateTime() {
     const [targetDate, targetAct, showCurrentActUntil] = findNextDate();
+    const currentTime = new Date();
 
-    updateActNumber(targetAct); // We always want the act number updated, no matter the path we take
+    if (removeActTextAfter > currentTime) {
+        updateActNumber(targetAct); // We always want the act number updated, no matter the path we take
+    } else {
+        document.getElementById("act-header").hidden = true;
+    }
 
     const timer = document.getElementById("timer-hider");
     const act = document.getElementById("act-released-container");
 
-    const currentTime = new Date();
     if (currentTime > targetDate && showCurrentActUntil > currentTime) {
         // We are in the grace period after an act releases.
         // As such, we just show the watch button and return
