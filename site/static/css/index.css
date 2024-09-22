@@ -85,13 +85,14 @@ a:hover {
 
 #watch-button {
 	font-family: "Arcane Nine";
-	font-size: 2rem;
+	font-size: 2.25rem;
 	margin: 1rem;
 	width: fit-content;
 	text-align: center;
 	border: 3px solid #a1afd6;
 	border-radius: 0.5rem;
 	padding: 0.5rem;
+	text-decoration: none;
 }
 
 #watch-button:hover {

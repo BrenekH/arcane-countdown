@@ -146,8 +146,4 @@ function setHiddenPlaces(months, weeks, days, hours, minutes, seconds) {
 window.addEventListener("DOMContentLoaded", () => {
     updateTime();
     setInterval(updateTime, 1000);
-
-    document.getElementById("watch-button").addEventListener("click", () => {
-        window.location = "https://www.netflix.com/title/81435684";
-    });
 });
