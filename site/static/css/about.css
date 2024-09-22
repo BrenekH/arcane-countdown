@@ -86,3 +86,7 @@ a:hover {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+
+#gh-repo-link {
+	padding-left: 1rem;
+}
