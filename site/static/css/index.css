@@ -83,6 +83,16 @@ a:hover {
 	margin-top: 1rem;
 }
 
+@media screen and (min-width: 800px) {
+	#header-container {
+		flex-direction: row;
+	}
+
+	.header-text-field {
+		margin: 1rem;
+	}
+}
+
 @media screen and (min-width: 600px) {
 	#timer-container {
 		display: flex;
@@ -90,14 +100,6 @@ a:hover {
 		justify-content: center;
 		flex-wrap: wrap;
 		max-width: 1500px;
-	}
-
-	#header-container {
-		flex-direction: row;
-	}
-
-	#s2-text {
-		margin: 1rem;
 	}
 
 	.timer-place:has(#seconds-digit) {
