@@ -1,11 +1,33 @@
-const targetDates = [[new Date("2024-11-09T00:00:00-0800"), "1"], [new Date("2024-11-16T00:00:00-0800"), "2"], [new Date("2024-11-23T00:00:00-0800"), "3"]];
+const targetDates = [
+    [new Date("2024-11-09T00:00:00-0800"), "1", new Date("2024-11-10T00:00:00-0800")],
+    [new Date("2024-11-16T00:00:00-0800"), "2", new Date("2024-11-17T00:00:00-0800")],
+    [new Date("2024-11-23T00:00:00-0800"), "3", new Date("2024-11-24T00:00:00-0800")]
+];
 
 function updateTime() {
-    const [targetDate, targetAct] = findNextDate();
+    const [targetDate, targetAct, showCurrentActUntil] = findNextDate();
+
+    updateActNumber(targetAct); // We always want the act number updated, no matter the path we take
+
+    const timer = document.getElementById("timer-hider");
+    const act = document.getElementById("act-released-container");
+
+    const currentTime = new Date();
+    if (currentTime > targetDate && showCurrentActUntil > currentTime) {
+        // We are in the grace period after an act releases.
+        // As such, we just show the watch button and return
+        timer.hidden = true;
+        act.hidden = false;
+
+        return;
+    } else {
+        // Make sure the timer is showing and the released text is not
+        timer.hidden = false;
+        act.hidden = true;
+    }
 
     const humanTimeLeft = countdown(targetDate, null, countdown.DEFAULTS | countdown.WEEKS);
 
-    updateActNumber(targetAct);
     displayTime(humanTimeLeft.months, humanTimeLeft.weeks, humanTimeLeft.days, humanTimeLeft.hours, humanTimeLeft.minutes, humanTimeLeft.seconds);
 }
 
@@ -13,12 +35,12 @@ function findNextDate() {
     const currentTime = new Date();
 
     for (let i = 0; i < targetDates.length; i++) {
-        if (targetDates[i][0] > currentTime) {
+        if (targetDates[i][2] > currentTime) {
             return targetDates[i];
         }
     }
 
-    return [currentTime, "?"];
+    return [currentTime, "?", currentTime];
 }
 
 function displayTime(months, weeks, days, hours, minutes, seconds) {
