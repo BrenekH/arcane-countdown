@@ -100,6 +100,40 @@ a:hover {
 	margin-top: 1rem;
 }
 
+#released-text {
+	font-family: "Noto Serif Display Bold";
+	font-size: 2rem;
+	text-align: center;
+	margin: 0;
+	margin-bottom: 1rem;
+}
+
+.btn-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+#watch-button {
+	font-family: "Arcane Nine";
+	font-size: 2rem;
+	margin: 1rem;
+	width: fit-content;
+	text-align: center;
+	border: 3px solid #a1afd6;
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+}
+
+#watch-button:hover {
+	cursor: pointer;
+}
+
+#watch-button:active {
+	transform: scale(0.98);
+}
+
 @media screen and (min-width: 800px) {
 	#header-container {
 		flex-direction: row;
