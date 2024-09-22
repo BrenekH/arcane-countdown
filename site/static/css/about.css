@@ -1,0 +1,88 @@
+html {
+	background-color: #131516;
+	color: #d8d4cf;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer {
+	font-family: "Noto Serif Display Bold";
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.about-container {
+	display: flex;
+	flex-direction: column;
+}
+
+h1 {
+	font-size: 2.5rem;
+	font-family: "Arcane Nine";
+	align-self: left;
+	margin: 0.5rem;
+	width: 99vw;
+	-webkit-user-select: none; /* Safari */
+	user-select: none; /* Standard syntax */
+}
+
+h1 > a {
+	text-decoration: none;
+}
+
+h1:hover {
+	cursor: pointer;
+}
+
+h1:active {
+	filter: opacity(75%);
+}
+
+h2 {
+	font-size: 5rem;
+	font-family: "Arcane Nine";
+	text-align: center;
+	margin: 0;
+	margin-bottom: 2rem;
+}
+
+h3 {
+	font-family: "Arcane Nine";
+	font-size: 2rem;
+	margin: 0;
+	margin-top: 2rem;
+	padding-left: 0.5rem;
+}
+
+li {
+	font-size: 1.25rem;
+}
+
+a {
+	color: #d8d4cf;
+}
+
+a:hover {
+	filter: opacity(50%);
+}
+
+.gradient {
+	color: #a1afd6;
+	background: linear-gradient(#2a426e, #f4fcff);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
