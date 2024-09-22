@@ -48,9 +48,9 @@ a:hover {
 	margin: 1rem;
 }
 
-.gold-gradient {
-	color: #c09556;
-	background: linear-gradient(#9c692b, #e4c181);
+.gradient {
+	color: #a1afd6;
+	background: linear-gradient(#2a426e, #f4fcff);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
