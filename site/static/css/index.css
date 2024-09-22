@@ -50,10 +50,7 @@ a:hover {
 
 .gradient {
 	color: #a1afd6;
-	/* background: linear-gradient(#6982a7, #d2e1e9); */
-	/* background: linear-gradient(#2a426e, #f4fcff); */
-	/* background: linear-gradient(#446086, #f4fcff); */
-	background: linear-gradient(#15213d, #ffffff);
+	background: linear-gradient(#2a426e, #f4fcff);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
