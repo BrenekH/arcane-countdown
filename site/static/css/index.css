@@ -6,7 +6,7 @@ html {
 body {
 	font-family: "Noto Serif Display Bold", Arial, sans-serif;
 	margin: 0;
-	height: 100vh;
+	height: 100dvh;
 
 	display: flex;
 	flex-direction: column;
