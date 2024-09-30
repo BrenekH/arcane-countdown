@@ -15,7 +15,7 @@ body {
 }
 
 h1 {
-	font-size: 5rem;
+	font-size: 3rem;
 	font-family: "Arcane Nine";
 	text-align: center;
 	margin: 0;
@@ -31,6 +31,10 @@ a:hover {
 
 .container {
 	margin: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 80%;
 }
 
 .gradient {
@@ -43,14 +47,29 @@ a:hover {
 
 .digit {
 	font-family: "Arcane Nine";
-	font-size: 10rem;
+	font-size: 5rem;
 	text-align: center;
 }
 
 .place-desc {
 	font-family: "Noto Serif Display Bold";
 	text-align: center;
-	font-size: 1.5rem;
+	font-size: 1rem;
+}
+
+.timer-place {
+	margin-left: 0.75rem;
+	margin-right: 0.75rem;
+}
+
+.timer-place:has(#seconds-digit) {
+	min-width: 7rem;
+	margin-left: 0rem;
+}
+
+.timer-place:has(#minutes-digit) {
+	min-width: 4rem;
+	margin-left: 1rem;
 }
 
 #header-container {
@@ -62,7 +81,7 @@ a:hover {
 
 #releases-text {
 	font-family: "Noto Serif Display Light";
-	font-size: 2rem;
+	font-size: 1.5rem;
 	text-align: center;
 	margin: 0;
 	margin-top: 1rem;
@@ -103,6 +122,14 @@ a:hover {
 	transform: scale(0.98);
 }
 
+#timer-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	max-width: 500px;
+}
+
 @media screen and (min-width: 800px) {
 	#header-container {
 		flex-direction: row;
@@ -114,12 +141,16 @@ a:hover {
 }
 
 @media screen and (min-width: 600px) {
-	#timer-container {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		flex-wrap: wrap;
-		max-width: 1500px;
+	h1 {
+		font-size: 5rem;
+	}
+
+	.digit {
+		font-size: 10rem;
+	}
+
+	.place-desc {
+		font-size: 1.5rem;
 	}
 
 	.timer-place:has(#seconds-digit) {
@@ -137,10 +168,11 @@ a:hover {
 		margin-right: 2rem;
 	}
 
-	.container {
-		height: 80%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+	#timer-container {
+		max-width: 1500px;
+	}
+
+	#releases-text {
+		font-size: 2rem;
 	}
 }
