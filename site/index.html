@@ -26,49 +26,15 @@
 
 		<link rel="stylesheet" href="./static/css/fonts.css">
 		<link rel="stylesheet" href="./static/css/index.css">
-
-		<script src="./static/js/libs/countdown.js"></script>
-		<script src="./static/js/index.js"></script>
 	</head>
 	<body>
 		<div class="container">
 			<div id="header-container">
 				<h1 class="gradient">Arcane</h1>
 				<h1 class="header-text-field gradient">Season 2</h1>
-				<h1 id="act-header" class="header-text-field gradient">Act <span id="act-number">1</span></h1>
 			</div>
 
-			<div id="timer-hider">
-				<p id="releases-text" class="gradient">releases in</p>
-				<div id="timer-container">
-					<div id="months-place" class="timer-place">
-						<div id="months-digit" class="digit gradient">98</div>
-						<div id="months-label" class="place-desc gradient">Months</div>
-					</div>
-					<div id="weeks-place" class="timer-place">
-						<div id="weeks-digit" class="digit gradient">98</div>
-						<div id="weeks-label" class="place-desc gradient">Weeks</div>
-					</div>
-					<div id="days-place" class="timer-place">
-						<div id="days-digit" class="digit gradient">76</div>
-						<div id="days-label" class="place-desc gradient">Days</div>
-					</div>
-					<div id="hours-place" class="timer-place">
-						<div id="hours-digit" class="digit gradient">54</div>
-						<div id="hours-label" class="place-desc gradient">Hours</div>
-					</div>
-					<div id="minutes-place" class="timer-place">
-						<div id="minutes-digit" class="digit gradient">00</div>
-						<div id="minutes-label" class="place-desc gradient">Minutes</div>
-					</div>
-					<div id="seconds-place" class="timer-place">
-						<div id="seconds-digit" class="digit gradient">00</div>
-						<div id="seconds-label" class="place-desc gradient">Seconds</div>
-					</div>
-				</div>
-			</div>
-
-			<div id="act-released-container" hidden="true">
+			<div id="act-released-container">
 				<p id="released-text" class="gradient">is out now!</p>
 				<div class="btn-container">
 					<a id="watch-button" class="gradient" href="https://www.netflix.com/title/81435684">Watch on Netflix</a>
